@@ -11,7 +11,7 @@ function RequestChart() {
   // ─────────────────────────────
   const sendRequest = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/')
+      const res = await axios.get('https://rateguard-api.onrender.com')
       console.log('Allowed:', res.data)
       setBlocked(false)
     } catch (err) {
@@ -49,7 +49,7 @@ function RequestChart() {
     const fetchLogs = async () => {
       try {
         const res = await axios.get(
-          'http://localhost:3000/api/logs'
+          'https://rateguard-api.onrender.com/api/logs'
         )
         setLogs(res.data)
       } catch (err) {

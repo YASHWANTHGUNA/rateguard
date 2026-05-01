@@ -8,7 +8,7 @@ function BlockedList() {
     const fetchBlocked = async () => {
       try {
         const res = await axios.get(
-          'http://localhost:3000/api/blocked'
+          'https://rateguard-api.onrender.com/api/blocked'
         )
         setBlocked(res.data)
       } catch (err) {

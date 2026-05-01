@@ -17,7 +17,7 @@ function RequestGraph() {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/logs");
+        const res = await axios.get("https://rateguard-api.onrender.com/api/logs");
 
         const grouped = {};
 

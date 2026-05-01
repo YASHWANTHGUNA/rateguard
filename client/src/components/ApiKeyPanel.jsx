@@ -23,7 +23,7 @@ function ApiKeyPanel() {
     setLoading(true)
     try {
       const res = await axios.post(
-        'http://localhost:3000/api/generate-key',
+        'https://rateguard-api.onrender.com/api/generate-key',
         { tier }
       )
       setNewKey(res.data)
@@ -36,7 +36,7 @@ function ApiKeyPanel() {
 
   const fetchKeys = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/api/keys')
+      const res = await axios.get('https://rateguard-api.onrender.com/api/keys')
       setKeys(res.data)
     } catch(err) {
       console.log(err)

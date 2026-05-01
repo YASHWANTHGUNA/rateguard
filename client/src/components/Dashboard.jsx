@@ -12,7 +12,7 @@ function Dashboard() {
     const fetchStats = async () => {
       try {
         const res = await axios.get(
-          'http://localhost:3000/api/stats'
+          'https://rateguard-api.onrender.com/api/stats'
         )
         setStats(res.data)
       } catch (err) {
